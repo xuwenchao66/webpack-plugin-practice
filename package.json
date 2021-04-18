@@ -15,6 +15,7 @@
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "fs-extra": "^9.1.0"
+    "fs-extra": "^9.1.0",
+    "schema-utils": "^3.0.0"
   }
 }

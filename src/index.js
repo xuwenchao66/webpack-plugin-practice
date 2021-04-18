@@ -1,5 +1,7 @@
 const fs = require('fs-extra')
 const path = require('path')
+const { validate } = require('schema-utils')
+const schema = require('./schema.json')
 // 插件名
 const pluginName = 'AssetsReportPlugin'
 // 默认参数
@@ -16,6 +18,8 @@ const tableHeader = `
 
 class AssetsReportPlugin {
   constructor(options) {
+    // 校验参数
+    validate(schema, options, { name: pluginName })
     // 合并参数
     this.options = { ...defaultOptions, ...options }
   }
